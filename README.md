@@ -1,3 +1,5 @@
+[![Cypress Tests](https://github.com/birdfoot/country-viewer/actions/workflows/cypress-test.yml/badge.svg)](https://github.com/birdfoot/country-viewer/actions/workflows/cypress-test.yml)
+
 # Country Viewer
 
 ## About
