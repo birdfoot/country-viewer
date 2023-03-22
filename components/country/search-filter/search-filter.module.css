@@ -1,0 +1,15 @@
+@layer components {
+  .layout {
+    --font-size: var(--fs-400);
+
+    display: grid;
+    margin-bottom: var(--margin-vertical);
+    gap: 2rem;
+  }
+
+  @media (min-width: 1000px) {
+    .layout {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}

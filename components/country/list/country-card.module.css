@@ -1,0 +1,44 @@
+@layer components {
+  .layout {
+    display: grid;
+    border-radius: 0.5rem;
+    background-color: var(--clr-page-surface);
+    box-shadow: var(--bsh-page-surface);
+    content-visibility: auto;
+    contain-intrinsic-block-size: auto 20rem;
+    transition: box-shadow 0.15s ease-in-out;
+    height: 100%;
+    align-content: start;
+  }
+
+  .layout:hover {
+    box-shadow: var(--bsh-400);
+  }
+
+  .layout:focus-within {
+    box-shadow: var(--focus-outline);
+  }
+
+  .layout a:focus {
+    box-shadow: none;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .content {
+    padding: 1rem 1rem 2rem;
+  }
+
+  .title {
+    font-size: var(--fs-500);
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,13 @@
+@layer components {
+  .layout {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: var(--margin-vertical);
+  }
+
+  @media (min-width: 1000px) {
+    .layout {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

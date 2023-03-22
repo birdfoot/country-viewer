@@ -1,0 +1,61 @@
+@layer components {
+  .layout {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-content: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--clr-page-surface);
+    box-shadow: var(--bsh-page-surface);
+  }
+
+  .layout:has(.input:focus-visible) {
+    box-shadow: var(--focus-outline);
+  }
+
+  @media (min-width: 1000px) {
+    .layout {
+      min-width: 33vw;
+      margin-right: auto;
+    }
+  }
+
+  .iconSearch {
+    stroke: var(--clr-neutral-500);
+    height: var(--fs-700);
+  }
+
+  .input {
+    border: 0;
+    font-size: var(--font-size);
+    color: var(--clr-page-text);
+    background-color: transparent;
+  }
+
+  .input:focus-visible {
+    box-shadow: none;
+  }
+
+  .clear {
+    border: 0;
+    color: var(--clr-neutral-500);
+    background-color: transparent;
+    box-shadow: none;
+    cursor: pointer;
+    transition: color 0.1s ease-in-out;
+  }
+
+  .clear:focus-visible {
+    box-shadow: var(--focus-outline);
+  }
+
+  .clear:hover,
+  .clear:active {
+    color: var(--clr-page-text);
+  }
+
+  .clear[data-hidden="true"] {
+    display: none;
+  }
+}

@@ -1,0 +1,71 @@
+@layer components {
+  .layout {
+    position: relative;
+    font-size: var(--font-size);
+  }
+
+  @media (min-width: 1000px) {
+    .layout {
+      margin-left: auto;
+    }
+  }
+
+  .toggleMenu {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: var(--width-filter);
+    padding: 1rem 1.5rem;
+    border: 0;
+    border-radius: 0.25rem;
+    color: var(--clr-page-text);
+    background-color: var(--clr-page-surface);
+    box-shadow: var(--bsh-page-surface);
+    cursor: pointer;
+    /* Aligns height to search bar */
+    line-height: var(--fs-700);
+  }
+
+  .toggleMenu:focus {
+    box-shadow: var(--focus-outline);
+  }
+
+  .iconIsExpanded {
+    height: var(--fs-400);
+    stroke: var(--clr-page-text);
+  }
+
+  .menu {
+    --padding: 1rem;
+
+    display: none;
+    position: absolute;
+    transform: translateY(1rem);
+    list-style-type: none;
+    width: var(--width-filter);
+    padding: var(--padding) 0;
+    border-radius: 0.25rem;
+    background-color: var(--clr-page-surface);
+    box-shadow: var(--bsh-300);
+    z-index: 1;
+  }
+
+  [aria-expanded="true"] + .menu {
+    display: block;
+  }
+
+  .menu li {
+    padding: calc(var(--padding) / 2) var(--padding);
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  .menu li:hover {
+    background-color: var(--clr-page-surface-highlight);
+  }
+
+  .menu li:focus {
+    box-shadow: none;
+  }
+}

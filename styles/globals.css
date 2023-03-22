@@ -1,0 +1,137 @@
+@layer reset, base, components, utilities;
+
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  * {
+    margin: 0;
+    font: inherit;
+  }
+
+  img,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  a {
+    display: inline-block;
+  }
+}
+
+@layer base {
+  *:focus,
+  *:focus-visible {
+    outline: 0;
+    box-shadow: var(--focus-outline);
+  }
+
+  body {
+    font-family: var(--ff-default);
+    color: var(--clr-page-text);
+    background-color: var(--clr-page-backdrop);
+  }
+
+  h1 {
+    font-size: var(--fs-800);
+  }
+}
+
+@layer components {
+  /* Layouts */
+  .container {
+    max-width: calc(var(--max-width-page) + var(--gutter-page) * 2);
+    padding: 0 var(--gutter-page);
+    margin: 0 auto;
+  }
+
+  /* GENERAL */
+  .link-button {
+    --font-size: var(--fs-500);
+
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    font-size: var(--font-size);
+    text-decoration: none;
+    color: var(--clr-page-text);
+    background-color: var(--clr-page-surface);
+    box-shadow: var(--bsh-page-surface);
+    border-radius: 0.25rem;
+    transition: background-color 0.25s ease-in-out;
+  }
+
+  .link-button:hover,
+  .link-button:active {
+    background-color: var(--clr-page-surface-highlight);
+  }
+
+  .link-button.small {
+    padding: 0.25rem 1rem;
+  }
+
+  .link-button:has(.link-button__icon) {
+    display: inline-flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .link-button__icon {
+    height: var(--font-size);
+    color: var(--clr-page-text);
+  }
+
+  .list {
+    font-size: var(--fs-400);
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+  }
+
+  .list--mb > * {
+    margin-bottom: 0.25rem;
+  }
+}
+
+@layer utilities {
+  .mb {
+    margin-bottom: var(--margin-vertical);
+  }
+
+  .inline-flow {
+    display: inline;
+  }
+
+  .inline-flow > * {
+    margin-bottom: 0.5rem;
+  }
+
+  .inline-flow > * + * {
+    margin-left: 0.5rem;
+  }
+
+  .small {
+    font-size: var(--fs-400);
+  }
+
+  .icon-small {
+    height: var(--fs-600);
+  }
+
+  .text-bold {
+    font-weight: bold;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+
+  .image-cover {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
