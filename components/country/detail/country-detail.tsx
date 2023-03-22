@@ -2,6 +2,7 @@
 import style from "./country-detail.module.css"
 
 import Link from "next/link"
+
 import { ICountry } from "../../../types"
 
 interface CountryDetailProps {

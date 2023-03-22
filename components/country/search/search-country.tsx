@@ -1,8 +1,9 @@
 import style from "./search-country.module.css"
 
+import { useState } from "react"
+
 import IconSearch from "../../shared/icons/icon-search"
 import IconXCircle from "../../shared/icons/icon-x-circle"
-import { useState } from "react"
 
 interface SearchCountryProps {
   onSearch: (searchString: string) => void

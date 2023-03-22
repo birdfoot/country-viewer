@@ -16,7 +16,6 @@ interface HomePageProps {
 
 const MemoFilterRegion = memo(FilterRegion)
 
-// TODO: Try filtering region from client-side via query params.
 const HomePage = ({ regions, countries }: HomePageProps) => {
   const [searchString, setSearchString] = useState("")
   const [selectedRegion, setSelectedRegion] = useState("")
