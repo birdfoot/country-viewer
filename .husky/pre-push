@@ -1,4 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Problem with locating Cypress script when git operation is triggered via GUI.
+# See: https://github.com/cypress-io/cypress/issues/17699
+# Workaround: https://github.com/cypress-io/cypress/issues/17699#issuecomment-962108730
+unset ELECTRON_RUN_AS_NODE
+
 npm test
