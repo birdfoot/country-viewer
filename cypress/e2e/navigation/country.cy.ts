@@ -1,14 +1,12 @@
 describe("Country page", () => {
-  const HOSTNAME = "http://localhost:3000"
-
   beforeEach(() => {
-    cy.visit(`${HOSTNAME}/countries/DEU`)
+    cy.visit("/countries/DEU")
   })
 
   it("can go back to country listing", () => {
     cy.get("[data-cy=country-back-link]").click()
 
-    cy.url().should("equal", HOSTNAME + "/")
+    cy.url().should("equal", Cypress.config().baseUrl + "/")
   })
 
   it("visit border country page", () => {

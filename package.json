@@ -5,12 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p 3000",
     "lint": "next lint",
     "preview": "npm run build && npm run start",
     "cypress": "cypress open",
     "test": "npm run test:e2e && npm run test:component",
-    "test:e2e": "start-server-and-test preview http://localhost:3000 \"cypress run --e2e\"",
+    "test:e2e": "start-server-and-test preview 3000 \"cypress run --e2e\"",
     "test:component": "cypress run --component",
     "prepare": "husky install"
   },

@@ -1,6 +1,6 @@
 describe("Country listing", () => {
   it("can navigate to a country page", () => {
-    cy.visit("http://localhost:3000")
+    cy.visit("/")
 
     cy.get("[class^=country-card_layout] a").then(($links) => {
       if ($links.length) {
